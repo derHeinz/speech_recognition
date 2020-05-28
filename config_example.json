@@ -1,0 +1,5 @@
+{
+    "voice_itemname": "VoiceCommand",
+    "openhab_baseurl": "http://localhost:8080/rest/items/",
+    "hotword": "porcupine"
+}
