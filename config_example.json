@@ -1,5 +1,6 @@
 {
     "voice_itemname": "VoiceCommand",
     "openhab_baseurl": "http://localhost:8080/rest/items/",
-    "hotword": "porcupine"
+    "hotword": "porcupine",
+    "health-port": 1234
 }

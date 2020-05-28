@@ -1,3 +1,4 @@
 SpeechRecognition>=3.8.1
 wiringpi>=2.60.0
 pvporcupine>=1.7.0
+Flask>=1.1.1

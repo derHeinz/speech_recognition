@@ -10,6 +10,7 @@ import logging
 from porcupinerecognizer import CallbackCapablePorcupineRecognizer
 from tonegenerator_multithreading import ToneGeneratorThread
 import postopenhab
+from healthcheck import HealthCheck
 
 logger = logging.getLogger(__file__)
 
@@ -29,6 +30,7 @@ def read_config_file(filename):
         return json.load(data_file)
 
 if __name__ == '__main__':
+    # logging
     setup_logging()
 
     # read configs
@@ -36,6 +38,10 @@ if __name__ == '__main__':
     voice_itemname = config['voice_itemname']
     openhab_baseurl = config['openhab_baseurl']
     hotword = config['hotword']
+    
+    # monitoring-health endpoint
+    h = HealthCheck(config['health-port'])
+    h.start()
 
     # Initialize the recognizer  
     a = ToneGeneratorThread()
